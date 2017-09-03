@@ -20,6 +20,7 @@ def readInput(path):
     print('nb servers: ' + str(nb_servers))
     print(servers)
     f.close()
+    return datacenter,unavailable,servers 
 
 def giveOutput(nb_servers, server):
     for r,s,p in server:
