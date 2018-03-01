@@ -7,4 +7,4 @@ def readInput(path):
         rides.append([int(i) for i in f.readline().split(' ')])
     
     f.close()
-    return rows, cols, nb_rides, rides
+    return rows, cols, vehicles, nb_rides, bonus, rides
