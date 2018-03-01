@@ -12,8 +12,9 @@ def readInput(path):
 def createOutput(path, rides):
   f = open(path.split('.')[0] + ".out", "w")
   for ride in rides:
+    f.write(str(len(ride)) + ' ')
     for i in range(len(ride)):
-      f.write(str(e))
+      f.write(str(ride[i]))
       if i < len(ride) - 1:
         f.write(' ')
     f.write('\n')
