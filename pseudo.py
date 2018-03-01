@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
 for i in range(nb_step):
-    to_change = cars
+    to_change = []
     prv = cars
 
     while (len(to_change) > 0):
-        for v in to_change:
+        for v in cars:
             if v.run:
                 continue
             v.step = min(rides)
@@ -18,9 +18,9 @@ for i in range(nb_step):
                 if (tmp[i].x == tmp[j].x 
                     and tmp[i].y == tmp[j].y):
                     if (tmp[i].step < tmp[j].step):
-                        to_change.pop(i)
+                        to_change.append(tmp[i])
                     else
-                        to_change.pop(j)
+                        to_change.append(tmp[j])
 
         if (len(to_change) == len(prv))
             break
