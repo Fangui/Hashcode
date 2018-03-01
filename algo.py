@@ -54,11 +54,11 @@ def build_matrix(ctx):
         voitures.append(Voiture())
     for step in range(ctx[5]):
         for voiture in voitures:
-            voiture.acutalize()
+            voiture.actualize()
             if voiture.run == False:
                 continue
             voiture.compute(rides, step, ctx[4])
-            index = voiture.map.index(min(voiture.map))
+            index = voiture.map.index(max(voiture.map))
             if (voiture.map[index] == -999999999):
                 continue
             ride = rides[index]

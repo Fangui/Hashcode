@@ -7,6 +7,7 @@ def dumb(path):
     output.append([])
   ride_start = []
   for ride in rides:
+    distance = abs(ride[2] - ride[0]) + abs(ride[3] - ride[1])
     ride_start.append(ride[5])
   v = 0
   for i in range(nb_rides):
