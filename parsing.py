@@ -9,8 +9,8 @@ def readInput(path):
   f.close()
   return rows, cols, vehicles, nb_rides, bonus, nb_steps, rides
 
-def createOutput(rides):
-  f = open("submission.out", "w")
+def createOutput(path, rides):
+  f = open(path.split('.')[0] + ".out", "w")
   for ride in rides:
     for i in range(len(ride)):
       f.write(str(e))
